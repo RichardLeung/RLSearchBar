@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18BBB5621BAA9FF5001E9429 /* RLSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BBB5611BAA9FF5001E9429 /* RLSearchView.m */; settings = {ASSET_TAGS = (); }; };
 		9058FB821BAA91EA0043D010 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058FB811BAA91EA0043D010 /* main.m */; };
 		9058FB851BAA91EA0043D010 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058FB841BAA91EA0043D010 /* AppDelegate.m */; };
 		9058FB881BAA91EA0043D010 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058FB871BAA91EA0043D010 /* FirstViewController.m */; };
@@ -15,6 +16,13 @@
 		9058FB901BAA91EA0043D010 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9058FB8F1BAA91EA0043D010 /* Images.xcassets */; };
 		9058FB931BAA91EA0043D010 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9058FB911BAA91EA0043D010 /* LaunchScreen.xib */; };
 		9058FB9F1BAA91EA0043D010 /* RLSearchBarDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058FB9E1BAA91EA0043D010 /* RLSearchBarDemoTests.m */; };
+		9058FBB41BAA91FA0043D010 /* RLCustomSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058FBAA1BAA91FA0043D010 /* RLCustomSearchBar.m */; };
+		9058FBB51BAA91FA0043D010 /* RLCustomSearchBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9058FBAB1BAA91FA0043D010 /* RLCustomSearchBar.xib */; };
+		9058FBB61BAA91FA0043D010 /* RLCustomSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058FBAD1BAA91FA0043D010 /* RLCustomSearchViewController.m */; };
+		9058FBB71BAA91FA0043D010 /* RLCustomSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9058FBAE1BAA91FA0043D010 /* RLCustomSearchViewController.xib */; };
+		9058FBB81BAA91FA0043D010 /* RLSearchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058FBB01BAA91FA0043D010 /* RLSearchButton.m */; };
+		9058FBB91BAA91FA0043D010 /* RLSearchRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058FBB21BAA91FA0043D010 /* RLSearchRecordCell.m */; };
+		9058FBBA1BAA91FA0043D010 /* RLSearchRecordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9058FBB31BAA91FA0043D010 /* RLSearchRecordCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18BBB5601BAA9FF5001E9429 /* RLSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLSearchView.h; sourceTree = "<group>"; };
+		18BBB5611BAA9FF5001E9429 /* RLSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLSearchView.m; sourceTree = "<group>"; };
 		9058FB7C1BAA91EA0043D010 /* RLSearchBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RLSearchBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9058FB801BAA91EA0043D010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9058FB811BAA91EA0043D010 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -43,6 +53,17 @@
 		9058FB981BAA91EA0043D010 /* RLSearchBarDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RLSearchBarDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9058FB9D1BAA91EA0043D010 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9058FB9E1BAA91EA0043D010 /* RLSearchBarDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RLSearchBarDemoTests.m; sourceTree = "<group>"; };
+		9058FBA91BAA91FA0043D010 /* RLCustomSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLCustomSearchBar.h; sourceTree = "<group>"; };
+		9058FBAA1BAA91FA0043D010 /* RLCustomSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLCustomSearchBar.m; sourceTree = "<group>"; };
+		9058FBAB1BAA91FA0043D010 /* RLCustomSearchBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLCustomSearchBar.xib; sourceTree = "<group>"; };
+		9058FBAC1BAA91FA0043D010 /* RLCustomSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLCustomSearchViewController.h; sourceTree = "<group>"; };
+		9058FBAD1BAA91FA0043D010 /* RLCustomSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLCustomSearchViewController.m; sourceTree = "<group>"; };
+		9058FBAE1BAA91FA0043D010 /* RLCustomSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLCustomSearchViewController.xib; sourceTree = "<group>"; };
+		9058FBAF1BAA91FA0043D010 /* RLSearchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLSearchButton.h; sourceTree = "<group>"; };
+		9058FBB01BAA91FA0043D010 /* RLSearchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLSearchButton.m; sourceTree = "<group>"; };
+		9058FBB11BAA91FA0043D010 /* RLSearchRecordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLSearchRecordCell.h; sourceTree = "<group>"; };
+		9058FBB21BAA91FA0043D010 /* RLSearchRecordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLSearchRecordCell.m; sourceTree = "<group>"; };
+		9058FBB31BAA91FA0043D010 /* RLSearchRecordCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RLSearchRecordCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +111,7 @@
 				9058FB871BAA91EA0043D010 /* FirstViewController.m */,
 				9058FB891BAA91EA0043D010 /* SecondViewController.h */,
 				9058FB8A1BAA91EA0043D010 /* SecondViewController.m */,
+				9058FBA81BAA91FA0043D010 /* RLCustomSearchBar */,
 				9058FB8C1BAA91EA0043D010 /* Main.storyboard */,
 				9058FB8F1BAA91EA0043D010 /* Images.xcassets */,
 				9058FB911BAA91EA0043D010 /* LaunchScreen.xib */,
@@ -122,6 +144,26 @@
 				9058FB9D1BAA91EA0043D010 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9058FBA81BAA91FA0043D010 /* RLCustomSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				9058FBA91BAA91FA0043D010 /* RLCustomSearchBar.h */,
+				9058FBAA1BAA91FA0043D010 /* RLCustomSearchBar.m */,
+				9058FBAB1BAA91FA0043D010 /* RLCustomSearchBar.xib */,
+				9058FBAC1BAA91FA0043D010 /* RLCustomSearchViewController.h */,
+				9058FBAD1BAA91FA0043D010 /* RLCustomSearchViewController.m */,
+				9058FBAE1BAA91FA0043D010 /* RLCustomSearchViewController.xib */,
+				9058FBAF1BAA91FA0043D010 /* RLSearchButton.h */,
+				9058FBB01BAA91FA0043D010 /* RLSearchButton.m */,
+				9058FBB11BAA91FA0043D010 /* RLSearchRecordCell.h */,
+				9058FBB21BAA91FA0043D010 /* RLSearchRecordCell.m */,
+				9058FBB31BAA91FA0043D010 /* RLSearchRecordCell.xib */,
+				18BBB5601BAA9FF5001E9429 /* RLSearchView.h */,
+				18BBB5611BAA9FF5001E9429 /* RLSearchView.m */,
+			);
+			path = RLCustomSearchBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,8 +246,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9058FBBA1BAA91FA0043D010 /* RLSearchRecordCell.xib in Resources */,
 				9058FB8E1BAA91EA0043D010 /* Main.storyboard in Resources */,
+				9058FBB71BAA91FA0043D010 /* RLCustomSearchViewController.xib in Resources */,
 				9058FB931BAA91EA0043D010 /* LaunchScreen.xib in Resources */,
+				9058FBB51BAA91FA0043D010 /* RLCustomSearchBar.xib in Resources */,
 				9058FB901BAA91EA0043D010 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,10 +269,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18BBB5621BAA9FF5001E9429 /* RLSearchView.m in Sources */,
+				9058FBB41BAA91FA0043D010 /* RLCustomSearchBar.m in Sources */,
 				9058FB8B1BAA91EA0043D010 /* SecondViewController.m in Sources */,
+				9058FBB91BAA91FA0043D010 /* RLSearchRecordCell.m in Sources */,
 				9058FB851BAA91EA0043D010 /* AppDelegate.m in Sources */,
 				9058FB881BAA91EA0043D010 /* FirstViewController.m in Sources */,
 				9058FB821BAA91EA0043D010 /* main.m in Sources */,
+				9058FBB61BAA91FA0043D010 /* RLCustomSearchViewController.m in Sources */,
+				9058FBB81BAA91FA0043D010 /* RLSearchButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +474,7 @@
 				9058FBA41BAA91EA0043D010 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9058FBA51BAA91EA0043D010 /* Build configuration list for PBXNativeTarget "RLSearchBarDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +483,7 @@
 				9058FBA71BAA91EA0043D010 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
