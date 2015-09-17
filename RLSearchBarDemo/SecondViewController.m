@@ -58,6 +58,7 @@
         NSLog(@"%@",str);
     }];
     searchView.tableViewDisplay.delegate =self;
+    searchView.tableViewDisplay.dataSource =self;
     [searchView.tableViewDisplay registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellSearchID"];
     [searchView show];
 }

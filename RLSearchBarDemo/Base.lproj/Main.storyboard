@@ -118,6 +118,10 @@
                                 <rect key="frame" x="20" y="64" width="560" height="487"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ph4-nG-Kdm" id="eyf-PZ-u8e"/>
+                                    <outlet property="delegate" destination="ph4-nG-Kdm" id="bRb-oJ-n6f"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <animations/>
