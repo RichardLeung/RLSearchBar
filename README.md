@@ -1,3 +1,4 @@
+<img src="./RLSearchBarDemo/image/demo.gif"/>
 ###前言
 原生的UISearchBar虽然集成容易，但面对多变的需求越来越显得力不从心。于是自己写了一个可以较高程度自定义的SearchBar和相关的一些拓展控件。
 ###实现
