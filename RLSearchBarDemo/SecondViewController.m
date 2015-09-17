@@ -12,6 +12,7 @@
 #define rgba(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
 
 @interface SecondViewController ()<UITableViewDataSource,UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -54,7 +55,7 @@
 
 -(void)buttonClick{
     RLSearchView *searchView =[[RLSearchView alloc]initWithCallBack:^(NSString *str) {
-
+        NSLog(@"%@",str);
     }];
     searchView.tableViewDisplay.delegate =self;
     [searchView.tableViewDisplay registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellSearchID"];

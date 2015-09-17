@@ -28,7 +28,6 @@
         self.backgroundColor =[UIColor clearColor];
         _navigationView =[[UIView alloc]initWithFrame:CGRectMake(0, -64, ScreenWidth, 64)];
         _navigationView.backgroundColor =rgba(45, 185, 105, 1);
-;
         [self addSubview:_navigationView];
         
         _searchBar =[RLCustomSearchBar searchBar];
@@ -62,7 +61,6 @@
     float y =[[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
     NSLog(@"keyboard changed, keyboard width = %f, height = %f~~~~~~~~~~~~~~%f",
           kbSize.width, kbSize.height,y);
-    // 在这里调整UI位置
 }
 
 -(void)buttonCancelClick:(UIButton *)button{
@@ -117,7 +115,6 @@
 }
 
 -(void)searchBarTextDidChange:(NSString *)str{
-    NSLog(@"%@",str);
     self.blockChange(str);
 }
 

@@ -12,7 +12,7 @@
 
 @interface FirstViewController ()<UITableViewDataSource,UITableViewDelegate,RLSearchButtonDelegate,RLCustomSearchViewControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak,  nonatomic)IBOutlet UITableView *tableView;
 @property (nonatomic,strong)RLSearchButton * mySearchBar;
 @property (nonatomic,strong)RLCustomSearchViewController *searchVC;
 
@@ -46,18 +46,20 @@
     
     
     _searchVC =[[RLCustomSearchViewController alloc]initWithCurrentViewController:self
-                                                      delegate:self
-                ];
+                                                      delegate:self];
     _searchVC.tableViewDisplay.delegate =self;
     _searchVC.tableViewDisplay.dataSource =self;
     [_searchVC.tableViewDisplay registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellSearchID"];
 }
 
+#pragma mark - RLSearchButtonDelegate
 -(void)searchButtonClick{
     [_searchVC show];
     _searchVC.searchBar.textFieldSearch.text =nil;
 }
 
+
+#pragma mark - RLCustomSearchViewControllerDelegate
 -(UIView *)searchViewControllerBuildBottomView:(RLCustomSearchViewController *)searchViewController{
     return nil;
 }
@@ -74,9 +76,8 @@
     [self.tableView reloadData];
 }
 
-#pragma mark - tableView代理方法
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+#pragma mark - UITableViewDelegate
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if ([tableView isEqual:_searchVC.tableViewDisplay]) {
         
         return 1;
@@ -91,13 +92,11 @@
     }
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView ==_tableView ) {
         UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
         cell.textLabel.text =@"测试信息（首页）";

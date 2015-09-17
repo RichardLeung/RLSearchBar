@@ -11,7 +11,7 @@
 @interface RLSearchRecordCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewMark;
-
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 @property (weak, nonatomic) IBOutlet UIButton *buttonFunc;
+
 @end
