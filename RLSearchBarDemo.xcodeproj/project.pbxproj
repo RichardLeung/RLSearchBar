@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A8CEB11BAAFAD1004EAF7E /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 18A8CEB01BAAFAD1004EAF7E /* demo.gif */; settings = {ASSET_TAGS = (); }; };
 		18BBB5621BAA9FF5001E9429 /* RLSearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BBB5611BAA9FF5001E9429 /* RLSearchView.m */; settings = {ASSET_TAGS = (); }; };
 		9058FB821BAA91EA0043D010 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058FB811BAA91EA0043D010 /* main.m */; };
 		9058FB851BAA91EA0043D010 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9058FB841BAA91EA0043D010 /* AppDelegate.m */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18A8CEB01BAAFAD1004EAF7E /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 		18BBB5601BAA9FF5001E9429 /* RLSearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RLSearchView.h; sourceTree = "<group>"; };
 		18BBB5611BAA9FF5001E9429 /* RLSearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RLSearchView.m; sourceTree = "<group>"; };
 		9058FB7C1BAA91EA0043D010 /* RLSearchBarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RLSearchBarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18A8CEAF1BAAFAD1004EAF7E /* image */ = {
+			isa = PBXGroup;
+			children = (
+				18A8CEB01BAAFAD1004EAF7E /* demo.gif */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
 		9058FB731BAA91EA0043D010 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 				9058FB871BAA91EA0043D010 /* FirstViewController.m */,
 				9058FB891BAA91EA0043D010 /* SecondViewController.h */,
 				9058FB8A1BAA91EA0043D010 /* SecondViewController.m */,
+				18A8CEAF1BAAFAD1004EAF7E /* image */,
 				9058FBA81BAA91FA0043D010 /* RLCustomSearchBar */,
 				9058FB8C1BAA91EA0043D010 /* Main.storyboard */,
 				9058FB8F1BAA91EA0043D010 /* Images.xcassets */,
@@ -247,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9058FBBA1BAA91FA0043D010 /* RLSearchRecordCell.xib in Resources */,
+				18A8CEB11BAAFAD1004EAF7E /* demo.gif in Resources */,
 				9058FB8E1BAA91EA0043D010 /* Main.storyboard in Resources */,
 				9058FBB71BAA91FA0043D010 /* RLCustomSearchViewController.xib in Resources */,
 				9058FB931BAA91EA0043D010 /* LaunchScreen.xib in Resources */,
