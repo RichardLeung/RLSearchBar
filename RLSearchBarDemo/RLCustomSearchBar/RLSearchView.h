@@ -23,6 +23,6 @@ typedef void(^RLSearchViewChangeBlock)(NSString *str);
 
 - (instancetype)initWithCallBack:(RLSearchViewChangeBlock)blockChange;
 
--(void)show;
+- (void)show;
 
 @end

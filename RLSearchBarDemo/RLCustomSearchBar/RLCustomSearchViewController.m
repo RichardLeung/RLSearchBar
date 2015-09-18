@@ -41,7 +41,7 @@
 {
     self = [super init];
     if (self) {
-        _delegate =delegate;
+        self.delegate =delegate;
         self.view.hidden =YES;
         [viewController addChildViewController:self];
         [viewController.view addSubview:self.view];
@@ -54,7 +54,6 @@
     [self.view setFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
     _isNavHidden =self.navigationController.navigationBarHidden;
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-    //[self reloadStoreData];
     [_tableViewList reloadData];
     _searchBar.textFieldSearch.textAlignment =NSTextAlignmentLeft;
     [_searchBar.textFieldSearch becomeFirstResponder];
@@ -338,9 +337,9 @@
  *  @param str 输入信息
  */
 -(void)searchBarButtonSearchDidClick:(NSString *)str{
-    NSLog(@"%@~~~~~~%@",str,[NSString stringWithFormat:@"%@",[NSDate date]]);
-    NSDictionary *dict =@{@"record":str,
-                          @"date":[NSString stringWithFormat:@"%@",[NSDate date]]};
+//    NSLog(@"%@~~~~~~%@",str,[NSString stringWithFormat:@"%@",[NSDate date]]);
+//    NSDictionary *dict =@{@"record":str,
+//                          @"date":[NSString stringWithFormat:@"%@",[NSDate date]]};
     if ([self.delegate respondsToSelector:@selector(searchViewControllerFinish:)]) {
         [self.delegate searchViewControllerFinish:str];
     }
