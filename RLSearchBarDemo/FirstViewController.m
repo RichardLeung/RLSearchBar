@@ -24,6 +24,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+    [self.navigationController.navigationBar setTranslucent:NO];
     [self createTitle:@"仿原生"];
     [self createSearchBar];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];

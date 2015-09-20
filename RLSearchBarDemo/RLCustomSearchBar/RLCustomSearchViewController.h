@@ -59,6 +59,8 @@
 - (instancetype)initWithCurrentViewController:(UIViewController *)viewController
                                      delegate:(id)delegate;
 
+
+
 -(void)show;
 
 -(void)dismiss;

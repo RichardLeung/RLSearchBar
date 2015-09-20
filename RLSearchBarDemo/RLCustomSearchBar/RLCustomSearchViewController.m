@@ -99,9 +99,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self initDefaultData];
-    
     [self createCustomSearchBar];
     [self createTableView];
     [self createBottomView];
@@ -130,15 +128,7 @@
 -(void)createTableView{
     _containView =[[UIView alloc]initWithFrame:CGRectMake(0, _navigationView.frame.size.height, ScreenWidth, ScreenHeight-_navigationView.frame.size.height)];
     [self.view addSubview:_containView];
-    
-    _tableViewList =[[UITableView alloc]initWithFrame:_containView.bounds style:UITableViewStylePlain];
-    _tableViewList.delegate =self;
-    _tableViewList.dataSource =self;
-    _tableViewList.backgroundColor =[UIColor whiteColor];
-    [_containView addSubview:_tableViewList];
-    _tableViewList.tableFooterView =[[UIView alloc]init];
-    [self.tableViewList registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
-    [self.tableViewList registerNib:[UINib nibWithNibName:@"RLSearchRecordCell" bundle:nil] forCellReuseIdentifier:@"cellRecordID"];
+
     
     _tableViewDisplay =[[UITableView alloc]initWithFrame:_containView.bounds style:UITableViewStylePlain];
     _tableViewDisplay.tableFooterView =[[UIView alloc]init];
@@ -177,8 +167,7 @@
 }
 
 -(void)buttonFuncClick:(UIButton *)button{
-    RLSearchRecordCell *cell =(RLSearchRecordCell *)[_tableViewList cellForRowAtIndexPath:[NSIndexPath indexPathForRow:button.tag-100 inSection:0]];
-    [_tableViewList reloadData];
+    
 }
 
 - (void)keyboardWillShow:(NSNotification *)notification {
@@ -217,106 +206,6 @@
 #pragma mark -UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     [_searchBar.textFieldSearch resignFirstResponder];
-}
-
-#pragma mark -UITableViewDelegate
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (_arrayList.count == 0) {
-        return 1;
-    }else{
-        return _arrayList.count+1;
-    }
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (_arrayList.count == 0) {
-        UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
-        cell.textLabel.text =@"无搜索记录";
-        cell.textLabel.font =[UIFont systemFontOfSize:15];
-        cell.textLabel.textColor =[UIColor lightGrayColor];
-        cell.textLabel.textAlignment =NSTextAlignmentCenter;
-        cell.textLabel.center =CGPointMake(cell.frame.size.width/2, cell.frame.size.height/2);
-        cell.selectionStyle =UITableViewCellSelectionStyleNone;
-        return cell;
-    }else{
-        if (indexPath.row <_arrayList.count) {
-            RLSearchRecordCell *cell =[tableView dequeueReusableCellWithIdentifier:@"cellRecordID" forIndexPath:indexPath];
-            cell.labelTitle.text = [[_arrayList objectAtIndex:indexPath.row] objectForKey:@"record"];
-            cell.imageViewMark.image =[UIImage imageNamed:@"discover_icon_zoom"];
-            [cell.buttonFunc setBackgroundImage:[UIImage imageNamed:@"discover_icon_zoom"] forState:UIControlStateNormal];
-            cell.buttonFunc.tag =100+indexPath.row;
-            [cell.buttonFunc addTarget:self action:@selector(buttonFuncClick:) forControlEvents:UIControlEventTouchUpInside];
-            return cell;
-        }else{
-            UITableViewCell *cell =[tableView dequeueReusableCellWithIdentifier:@"cellID" forIndexPath:indexPath];
-            cell.textLabel.text =@"清空搜索历史";
-            cell.textLabel.font =[UIFont systemFontOfSize:15];
-            cell.textLabel.textColor =rgba(38, 152, 87, 1);
-            cell.textLabel.textAlignment =NSTextAlignmentCenter;
-            cell.textLabel.center =CGPointMake(cell.frame.size.width/2, cell.frame.size.height/2);
-            cell.selectionStyle =UITableViewCellSelectionStyleNone;
-            return cell;
-        }
-    }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 0.1;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [_searchBar.textFieldSearch resignFirstResponder];
-    if (_arrayList.count == 0) {
-        NSLog(@"然并卵");
-    }else{
-        if (indexPath.row ==_arrayList.count) {
-            UIAlertView *alertView =[[UIAlertView alloc]initWithTitle:@"是否清空搜索历史" message:nil delegate:self cancelButtonTitle:@"确认" otherButtonTitles:@"取消", nil];
-            alertView.tag =999;
-            [alertView show];
-        }else{
-            NSString *keyword =[[_arrayList objectAtIndex:indexPath.row] objectForKey:@"record"];
-            self.searchBar.textFieldSearch.text =keyword;
-            if ([self.delegate respondsToSelector:@selector(searchViewControllerFinish:)]) {
-                [self.delegate searchViewControllerFinish:keyword];
-            }
-            //[self reloadStoreData];
-            [_tableViewList reloadData];
-        }
-    }
-}
-
--(void)viewDidLayoutSubviews
-{
-    if ([self.tableViewList respondsToSelector:@selector(setSeparatorInset:)]) {
-        [self.tableViewList setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)];
-    }
-    
-    if ([self.tableViewList respondsToSelector:@selector(setLayoutMargins:)]) {
-        [self.tableViewList setLayoutMargins:UIEdgeInsetsMake(0,0,0,0)];
-    }
-}
-
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
-        [cell setSeparatorInset:UIEdgeInsetsZero];
-    }
-    
-    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
-        [cell setLayoutMargins:UIEdgeInsetsZero];
-    }
-}
-
-#pragma mark -UIAlertViewDelegate
--(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    NSLog(@"%ld",(long)buttonIndex);
-    if (alertView.tag ==999) {
-        if (buttonIndex == 0) {
-            [_arrayList removeAllObjects];
-            _arrayList =nil;
-            [_tableViewList reloadData];
-        }
-    }
 }
 
 #pragma mark -RLCustomSearchDelegate
