@@ -23,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
     [self createTitle:@"仿原生"];
     [self createSearchBar];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cellID"];
@@ -31,7 +32,7 @@
 -(void)createTitle:(NSString *)title{
     self.title =title;
     UILabel *labelTitle =[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
-    labelTitle.textColor = [UIColor blackColor];
+    labelTitle.textColor = [UIColor whiteColor];
     labelTitle.backgroundColor = [UIColor clearColor];
     labelTitle.textAlignment = NSTextAlignmentCenter;
     labelTitle.text = title;

@@ -314,7 +314,6 @@
         if (buttonIndex == 0) {
             [_arrayList removeAllObjects];
             _arrayList =nil;
-            //[_store clearTable:_tableName];
             [_tableViewList reloadData];
         }
     }
@@ -337,9 +336,6 @@
  *  @param str 输入信息
  */
 -(void)searchBarButtonSearchDidClick:(NSString *)str{
-//    NSLog(@"%@~~~~~~%@",str,[NSString stringWithFormat:@"%@",[NSDate date]]);
-//    NSDictionary *dict =@{@"record":str,
-//                          @"date":[NSString stringWithFormat:@"%@",[NSDate date]]};
     if ([self.delegate respondsToSelector:@selector(searchViewControllerFinish:)]) {
         [self.delegate searchViewControllerFinish:str];
     }
